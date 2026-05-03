@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tô na Rota | Tô na Jágua - Curadoria Turística</title>
+    <style>
+        :root {
+            --primary: #003366; /* Azul profundo (Confiabilidade/Mar) */
+            --secondary: #f39c12; /* Ouro/Dunas */
+            --accent: #27ae60; /* Verde (Saúde/Natureza) */
+            --bg-light: #f4f7f6;
+            --text-main: #2c3e50;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg-light); color: var(--text-main); margin:0; }
+
+        /* HEADER & LOGO */
+        header { 
+            background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; 
+            align-items: center; border-bottom: 3px solid var(--primary); position: sticky; top:0; z-index:1000;
+        }
+        .brand { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+        .brand span { color: var(--secondary); }
+
+        /* SEARCH HERO */
+        .hero-search {
+            background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://via.placeholder.com/1200x400?text=Jaguaruna+Orla');
+            color: white; padding: 60px 5%; text-align: center;
+        }
+        .search-box {
+            background: white; padding: 10px; border-radius: 50px; display: flex; 
+            max-width: 700px; margin: 20px auto; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .search-box input { border: none; padding: 15px; flex-grow: 1; border-radius: 50px; outline: none; font-size: 1rem; }
+        .search-box button { background: var(--secondary); border: none; color: white; padding: 10px 30px; border-radius: 50px; cursor: pointer; font-weight: bold; }
+
+        /* CATEGORIES ECOSYSTEM */
+        .eco-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px; padding: 20px 5%; margin-top: -40px;
+        }
+        .eco-item {
+            background: white; padding: 20px; border-radius: 12px; text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; cursor: pointer;
+        }
+        .eco-item:hover { transform: translateY(-5px); border-bottom: 4px solid var(--secondary); }
+        .eco-item i { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+        /* SECTIONS */
+        .container { padding: 40px 5%; }
+        .section-title { font-size: 2rem; margin-bottom: 30px; border-left: 6px solid var(--secondary); padding-left: 15px; }
+
+        /* CARDS CURADOS */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .curated-card {
+            background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee; position: relative;
+        }
+        .badge-premium { position: absolute; top: 15px; right: 15px; background: var(--primary); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; }
+        .card-thumb { width: 100%; height: 220px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .card-meta { display: flex; gap: 15px; font-size: 0.85rem; color: #7f8c8d; margin: 10px 0; }
+        
+        .btn-menu { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 0.9rem; margin-top: 10px; }
+        .btn-gps { display: inline-block; border: 1px solid var(--primary); color: var(--primary); padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 0.9rem; }
+
+        /* BALNEÁRIOS NAV */
+        .balnearios-bar {
+            overflow-x: auto; white-space: nowrap; padding: 15px 5%; background: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .balneario-link {
+            display: inline-block; padding: 8px 20px; margin-right: 10px;
+            background: #eee; border-radius: 20px; text-decoration: none; color: var(--text-main); font-weight: 500;
+        }
+        .balneario-link:hover { background: var(--primary); color: white; }
+
+        /* FOOTER */
+        footer { background: var(--primary); color: white; padding: 50px 5%; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">TÔNA<span>ROTA</span> | TÔNA<span>JÁGUA</span></div>
+        <nav><strong>Curadoria Profissional de Jaguaruna</strong></nav>
+    </header>
+
+    <section class="hero-search">
+        <h1>O Coração de Jaguaruna na Palma da sua Mão</h1>
+        <p>38km de orla contínua, do rústico ao monumental.</p>
+        <div class="search-box">
+            <input type="text" placeholder="O que você procura? (Ex: Melhores frutos do mar, Pousadas no Camacho...)">
+            <button>BUSCAR</button>
+        </div>
+    </section>
+
+    <div class="eco-grid">
+        <div class="eco-item"><i>🍽️</i> <strong>Comer</strong><br><small>Menus Digitais</small></div>
+        <div class="eco-item"><i>🛌</i> <strong>Dormir</strong><br><small>Tour Virtual</small></div>
+        <div class="eco-item"><i>🌊</i> <strong>Lazer</strong><br><small>Guia Visual</small></div>
+        <div class="eco-item"><i>🏥</i> <strong>Saúde</strong><br><small>Plantões</small></div>
+        <div class="eco-item"><i>🛒</i> <strong>Compras</strong><br><small>Agro & Construção</small></div>
+        <div class="eco-item"><i>🏛️</i> <strong>Utilidade</strong><br><small>Serviços Cívicos</small></div>
+    </div>
+
+    <div class="balnearios-bar">
+        <a href="#" class="balneario-link">Camacho</a>
+        <a href="#" class="balneario-link">Garopaba do Sul</a>
+        <a href="#" class="balneario-link">Dunas do Sul</a>
+        <a href="#" class="balneario-link">Figueirinha</a>
+        <a href="#" class="balneario-link">Arroio Corrente</a>
+        <a href="#" class="balneario-link">Campo Bom</a>
+        <a href="#" class="balneario-link">Esplanada</a>
+        <a href="#" class="balneario-link">Torneiro</a>
+    </div>
+
+    <main class="container">
+        
+        <h2 class="section-title">Tesouros Visuais e Naturais</h2>
+        <div class="card-grid">
+            <!-- Laje da Jágua -->
+            <div class="curated-card">
+                <span class="badge-premium">PONTO TURÍSTICO</span>
+                <img src="C:\Users\samuel\Downloads\Tonarota\laje.png" class="card-thumb">
+                <div class="card-body">
+                    <h3>Laje da Jágua (A Nazaré Brasileira)</h3>
+                    <p>Ondas gigantes a 5km da costa. Monitoramento exclusivo para contemplação segura.</p>
+                    <a href="#" class="btn-menu">Guia de Acesso</a>
+                </div>
+            </div>
+
+            <!-- Chuveirão -->
+            <div class="curated-card">
+                <span class="badge-premium">ICÔNICO</span>
+                <img src="C:\Users\samuel\Downloads\Tonarota\Chuveirao.jpg" class="card-thumb">
+                <div class="card-body">
+                    <h3>Chuveirão de Arroio Corrente</h3>
+                    <p>Encontro único entre as águas doces das lagoas e o mar salgado.</p>
+                    <a href="#" class="btn-menu">Ver Horários</a>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h2 class="section-title">Gastronomia Curada</h2>
+        <div class="card-grid">
+            <div class="curated-card">
+                <span class="badge-premium">CURADORIA TONAROTA</span>
+                <img src="C:\Users\samuel\Downloads\Tonarota\restaurante.jpg" class="card-thumb">
+                <div class="card-body">
+                    <h3>Restaurante da Orla</h3>
+                    <div class="card-meta">
+                        <span>⭐ 4.9 (Curadoria)</span>
+                        <span>📍 Camacho</span>
+                    </div>
+                    <p>Frutos do mar selecionados com fotos reais e menus sempre atualizados.</p>
+                    <div style="display:flex; gap:10px;">
+                        <a href="#" class="btn-menu">📖 VER CARDÁPIO</a>
+                        <a href="#" class="btn-gps">📍 COMO CHEGAR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>Tô na Rota | Tô na Jágua</h2>
+        <p>A Revolução do Turismo Curado e Organizado em Jaguaruna/SC</p>
+        <p style="margin-top:20px; font-size:0.8rem; opacity:0.6;">&copy; 2026 - O Coração da Cidade na sua Mão.</p>
+    </footer>
+
+</body>
+</html>
